@@ -1,0 +1,28 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE/editor configs
+.vscode/
+.idea/
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Composer dependencies (if used)
+vendor/
+
+# Cache / temp
+cache/
+tmp/
+*.tmp
+
+# Uploads (if you don’t want user uploads tracked)
+uploads/
+*.bak
+
+# Environment files
+.env
+.env.*
