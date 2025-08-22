@@ -1,0 +1,151 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1730125477357-03a906bde005?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  color: #333;
+  padding: 20px;
+  line-height: 1.6;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+h1 {
+  font-size: 36px;
+  font-family: Helvetica;
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: rgba(44, 83, 167, 0.7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideDown 1s ease;
+}
+
+/* Section Cards */
+.meeting-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.members,
+.availability,
+.booking {
+  flex: 1 1 300px;
+  margin: 8px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.members:hover,
+.availability:hover,
+.booking:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+/* Headings */
+h2 {
+  font-size: 24px;
+  margin-bottom: 14px;
+  text-align: center;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 10px 0;
+  text-align: center;
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 6px;
+  background: #f9f9f9;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+li:hover {
+  background: #edf2f7;
+  transform: scale(1.02);
+}
+
+/* Buttons */
+.book-btn {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  color: #fff;
+  border: none;
+  padding: 5px 20px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+.book-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.4);
+}
+.book-btn:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+input {
+  font-size: 150%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border-color: rgba(203, 217, 247, 0.5);
+}
+
+select {
+  font-size: 150%;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+  .members, .availability, .booking { flex: 1 1 100%; }
+  h1 { font-size: 28px; }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(15px);}
+  to {opacity:1; transform: translateY(0);}
+}
+@keyframes slideDown {
+  from {opacity:0; transform: translateY(-20px);}
+  to {opacity:1; transform: translateY(0);}
+}
